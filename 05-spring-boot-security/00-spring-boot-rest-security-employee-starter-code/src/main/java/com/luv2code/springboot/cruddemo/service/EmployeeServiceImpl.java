@@ -31,8 +31,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         if (result.isPresent()) {
             theEmployee = result.get();
-        }
-        else {
+        } else {
             // we didn't find the employee
             throw new RuntimeException("Did not find employee id - " + theId);
         }
@@ -50,9 +49,3 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeeRepository.deleteById(theId);
     }
 }
-
-
-
-
-
-
